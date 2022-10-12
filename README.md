@@ -10,3 +10,6 @@ The app uses artificial intelligence to track planes. Once it tracks planes, it 
 ## Screenshots
 <img src="https://github.com/lightlessdays/MezzAR/blob/main/1.png" width=40%>  <img src="https://github.com/lightlessdays/MezzAR/blob/main/2.png" width=40%>
 <img src="https://github.com/lightlessdays/MezzAR/blob/main/3.png" width=40%>  <img src="https://github.com/lightlessdays/MezzAR/blob/main/4.png" width=40%>
+
+## Links
+Medium: [https://lightlessdays.medium.com/creating-an-augmented-reality-measuring-app-ac5599d0ff8b](https://lightlessdays.medium.com/creating-an-augmented-reality-measuring-app-ac5599d0ff8b)
