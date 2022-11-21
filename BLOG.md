@@ -10,35 +10,35 @@ So, start by creating a new Unity 3D Project and then install a few new packages
 
 Next, switch your platform to Android and then click on “Add Open Scenes” button.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038115006/kQDzda299.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038115006/kQDzda299.png)
 
 Next, delete the MainCamera from hierarchy. Then, right click on the empty space in the hierarchy and add XR > AR Session Origin to the hierarchy.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038127376/bsuB01ve9.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038127376/bsuB01ve9.png)
 
 Also add AR Session.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038143293/zS3-tlDxk.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038143293/zS3-tlDxk.png)
 
 Next, add XR > AR Default Plane to the hierarchy.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038188518/U9EbSknwW.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038188518/U9EbSknwW.png)
 
 This will be the prefab for plane detection. You can create a new material, if you do not want the default debug plane. Else, continue with the default debug plane. Since I do not like the default material, I created a new one, like the one shown below:
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038198561/E7f4jYfgg.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038198561/E7f4jYfgg.png)
 
 Assign this material to your plane’s Mesh Renderer.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038205752/PYnXaZ9Fa.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038205752/PYnXaZ9Fa.png)
 
 Next, make a prefab out of AR Default Plane.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038212316/ZhcjMSh-6.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038212316/ZhcjMSh-6.png)
 
 In AR Session Origin, add an AR Plane Manager script and assign the ARDefaultPlane prefab to the Plane Prefab field.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038222207/JT7v-i_g7.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038222207/JT7v-i_g7.png)
 
 Now, let us run and test the app to see if it is working. You need to make some changes in the Player Settings though-
 
@@ -55,23 +55,23 @@ And we are done… now hit the Build and Run button to test your app.
 
 Now, we need to implement a feature that will allow us to spawn objects when we tap on the plane. So, add XR Placement Interactable in hierarchy.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038312217/6uYFbzTCi.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038312217/6uYFbzTCi.png)
 
 Create a prefab out of a sphere.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038329558/ofR7MXrlG.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038329558/ofR7MXrlG.png)
 
 Assign that sphere to Placement Prefab field in AR Placement Interactable.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038348145/EA0ON2Ha1.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038348145/EA0ON2Ha1.png)
 
 To AR Session Origin, add AR Raycast Manager.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038366898/PDtl5h08F.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038366898/PDtl5h08F.png)
 
 In the AR Camera, add AR Gesture Interactor Script.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038381308/2DuWmB0ld.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038381308/2DuWmB0ld.png)
 
 Now build the app again and test it.
 
@@ -79,15 +79,15 @@ Now build the app again and test it.
 
 Now we are coming to the part I faced the most difficulty in: the Line Renderer. The first step would be to add a Line Renderer component in the hierarchy.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038432477/p6qHbNtbN.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038432477/p6qHbNtbN.png)
 
 Once it is added, change the size to zero.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038448233/MyXVgci4D.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038448233/MyXVgci4D.png)
 
 Size is the number of points a line renderer has. Change the line width to 0.01.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038461933/n2d_brfCV.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038461933/n2d_brfCV.png)
 
 We will be managing our Line Renderer using a script. We will create a function called DrawLine, which will be called every time the user places a new sphere. First, we create a reference of the Line Renderer.
 
@@ -108,17 +108,17 @@ public void DrawLine(ARObjectPlacementEventArgs args) {
 
 Assign this script to an empty GameObject.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038569795/pDma6vC7X.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038569795/pDma6vC7X.png)
 
 Next, in AR Placement Interactable, we will find an interactable event called Object Placed. This gives the argument of type ARObjectPlacementEventArgs. Now we know why we added it in the function.
 
 Object Placed method is called everytime a new object is placed onto the plane.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038588355/pc8HhXMpl.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038588355/pc8HhXMpl.png)
 
 Click on the “+” sign and assign LineManager GameObject to the None field. From functions, select DrawLine.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038604980/B_BR_eZMs.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038604980/B_BR_eZMs.png)
 
 Once this is done, build your app and test it.
 
@@ -180,11 +180,11 @@ Vector3 directionVector = pointB - pointA;
 
 Now, we can create a prefab out of TextMeshPro object.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038734667/7fWJFdWY2.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038734667/7fWJFdWY2.png)
 
 Now, assign it to our LineManager.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038758130/XrkulK21U.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038758130/XrkulK21U.png)
 
 Build and test your app now.
 
