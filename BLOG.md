@@ -6,7 +6,7 @@ Today we will create an app like Measure. Measure was an app by Google that used
 
 So, start by creating a new Unity 3D Project and then install a few new packages: ARFoundation, ARCore XR Plugin and XR Interaction Toolkit. You can check the packages and their versions below:
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038095771/w3OPzcVaC.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669038095771/w3OPzcVaC.png)
 
 Next, switch your platform to Android and then click on “Add Open Scenes” button.
 
