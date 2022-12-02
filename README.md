@@ -13,3 +13,7 @@ The app uses artificial intelligence to track planes. Once it tracks planes, it 
 
 ## Links
 Medium: [https://lightlessdays.medium.com/creating-an-augmented-reality-measuring-app-ac5599d0ff8b](https://lightlessdays.medium.com/creating-an-augmented-reality-measuring-app-ac5599d0ff8b)
+GitHub: [https://lnkd.in/dFQrHtav](https://lnkd.in/dFQrHtav)
+Hashnode: [https://lnkd.in/dW4RrCdw](https://lnkd.in/dW4RrCdw)
+Play Store: [https://lnkd.in/dW4-g4Mk](https://lnkd.in/dW4-g4Mk)
+
